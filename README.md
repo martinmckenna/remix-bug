@@ -1,38 +1,14 @@
-# Welcome to Remix!
+## To replicate flash of unstyled content
 
-- [Remix Docs](https://remix.run/docs)
+For this issue: https://github.com/remix-run/remix/issues/7516#issuecomment-1737587623
 
-## Development
+1. run app with `yarn && yarn dev` (or npm commands)
+2. open up browser dev tools and disable caching
+   * the flash _can_ happen without the dev tools open at all but it's rarer to see since the style application is quick
+   * this would obviously be more problematic on a site that has more styles and content
+3. Switch between the homepage and about page
+4. See elements flex after the styles have been applied
 
-From your terminal:
+video of me switching between:
 
-```sh
-npm run dev
-```
-
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+https://i.imgur.com/nDN78sh.mp4
